@@ -1,48 +1,3 @@
----
-title: 【JetBrains】教育许可证申请指南
----
-
-!!! abstract "JetBrains 教育许可证 [^1]"
-
-    **JetBrains 教育许可证**是专门为教育机构、教师和学生设计的，旨在为他们提供免费或优惠的 JetBrains 产品许可证。
-    通过教育许可证，教育机构和学生可以获得免费的 JetBrains IDE 和工具包，包括专业版和其他功能丰富的插件。具体而言，教育许可证可以获得以下优势：
-    
-    - **免费许可证**：获得为期一年的使用许可证，学生授权到期后如果还是在校状态可以申请续期。
-    - **所有产品的访问**：允许访问 JetBrains 公司旗下所有的 IDE 产品，满足多种开发语言需求
-    - **用于学习和项目开发**：可以将这些 IDE 用于学校课程作业、个人学习和非商业项目的开发中。
-    - **活跃的社区支持**：可以参与专门为学生和教育工作者设置的社区论坛和资源中心，以便获得支持和交流意见。
-
----
-
-## 1. 注册 JetBrains 账号
-
-如果之前还未拥有 JetBrains 账号，需要在 [JetBrains 官方网站](https://account.jetbrains.com/login)进行注册 (1)
-{ .annotate }
-
-1. 建议使用国际常用邮箱（如 [Outlook](https://outlook.live.com)、[Gmail](https://mail.google.com)）进行注册，以广泛适用于国外网站
-
-![](../assets/images/jetbrains-application-guide/register-account-1.png)
-
----
-
-使用邮箱注册后，会收到一封邮箱确认验证码的邮件，将验证码填写至注册页面
-
-!!! warning "可能是被视为垃圾邮件"
-
-    如果许久还未提示收到相关邮件，可能是被视为垃圾邮件，可以检查垃圾邮件查看
-
-![](../assets/images/jetbrains-application-guide/register-account-2.png)
-
----
-
-按要求将账户信息填写完整后即可完成注册
-
-![](../assets/images/jetbrains-application-guide/register-account-3.png)
-
----
-
-## 2. 申请教育许可证（官方文件）
-
 !!! abstract "教育许可证计划"
 
     JetBrain 提供了三种免费的教育许可证计划：
@@ -67,7 +22,7 @@ title: 【JetBrains】教育许可证申请指南
     - **不能用于任何组织的产品或服务的开发。**
     - **不能与任何第三方共享。**
 
-!!! example "申请方式 [^2] [^3]"
+!!! example "申请方式 [^1] [^2]"
 
     申请免费教育许可证的可选方式：
     
@@ -85,26 +40,26 @@ title: 【JetBrains】教育许可证申请指南
 
 ---
 
-### 下载学籍验证报告
+### 获取学籍验证报告
 
 访问[中国高等教育学生信息网（学信网）](https://www.chsi.com.cn)，并登录网站 (1)
 { .annotate }
 
 1. 如果忘记密码，可以尝试使用微信扫码登录
 
-![](../assets/images/jetbrains-application-guide/get-verification-1.png)
+![](../../assets/images/jetbrains-educational-license/get-verification-1.png)
 
 ---
 
 在账号管理页面左侧，点击学信档案栏下的 **"在线验证报告"** 选项
 
-![](../assets/images/jetbrains-application-guide/get-verification-2.png)
+![](../../assets/images/jetbrains-educational-license/get-verification-2.png)
 
 ---
 
 在 **"教育部学籍在线验证报告"** 右侧点击 **"查看"** 按钮
 
-![](../assets/images/jetbrains-application-guide/get-verification-3.png)
+![](../../assets/images/jetbrains-educational-license/get-verification-3.png)
 
 ---
 
@@ -117,7 +72,7 @@ title: 【JetBrains】教育许可证申请指南
 
 在已申请的、有效期内有效的报告右侧点击 **"查看"** 操作查看报告
 
-![](../assets/images/jetbrains-application-guide/get-verification-4.png)
+![](../../assets/images/jetbrains-educational-license/get-verification-4.png)
 
 ---
 
@@ -130,7 +85,7 @@ title: 【JetBrains】教育许可证申请指南
 
     文件名格式为：`教育部学籍在线验证报告_姓名.pdf`，请勿修改文件名称和扩展名！
 
-![](../assets/images/jetbrains-application-guide/get-verification-5.png)
+![](../../assets/images/jetbrains-educational-license/get-verification-5.png)
 
 ---
 
@@ -138,7 +93,7 @@ title: 【JetBrains】教育许可证申请指南
 
 在 [JetBrains 免费许可证计划网站](https://www.jetbrains.com.cn/community/education)下方，点击 **"立即申请"** 跳转至申请页面
 
-![](../assets/images/jetbrains-application-guide/apply-license-1.png)
+![](../../assets/images/jetbrains-educational-license/apply-license-1.png)
 
 ---
 
@@ -153,9 +108,9 @@ title: 【JetBrains】教育许可证申请指南
 
 <div class="grid" markdown>
 
-![](../assets/images/jetbrains-application-guide/apply-license-2.png)
+![](../../assets/images/jetbrains-educational-license/apply-license-2.png)
 
-![](../assets/images/jetbrains-application-guide/apply-license-3.png)
+![](../../assets/images/jetbrains-educational-license/apply-license-3.png)
 
 </div>
 
@@ -167,17 +122,17 @@ title: 【JetBrains】教育许可证申请指南
 
     官方文件为人工审批，申请提交后通常在一周（长则 1~2 周）内会收到邮件通知处理结果
 
-![](../assets/images/jetbrains-application-guide/apply-license-4.png)
+![](../../assets/images/jetbrains-educational-license/apply-license-4.png)
 
 ---
 
 如果收到如下邮件通知，则说明 JetBrains 教育许可证申请成功！
 
-!!! warning "可能是被视为垃圾邮件"
+!!! warning "可能被视为垃圾邮件"
 
     如果两周后还未提示收到相关邮件，可能是被视为垃圾邮件，可以检查垃圾邮件查看
 
-![](../assets/images/jetbrains-application-guide/apply-license-5.png)
+![](../../assets/images/jetbrains-educational-license/apply-license-5.png)
 
 ---
 
@@ -191,26 +146,7 @@ title: 【JetBrains】教育许可证申请指南
     
     许可证相关问题参见：<https://sales.jetbrains.com/hc/zh-cn>
 
-![](../assets/images/jetbrains-application-guide/apply-license-6.png)
+![](../../assets/images/jetbrains-educational-license/apply-license-6.png)
 
----
-
-## 3. 在 JetBrains IDE 激活许可证
-
-以 CLion 为例，打开 CLion，在欢迎页面左下方点击更多按钮，并点击 **"管理许可证..."** 选项
-
-![](../assets/images/jetbrains-application-guide/activate-license-1.png)
-
----
-
-在许可证界面，选择 CLion ，并选择从 **JetBrains Account** 获取许可证，点击 **"激活"** 即可
-
-!!! tip "其他产品授权"
-
-    教育许可证授权的其他产品或插件（如 Material Theme UI）也可以通过同样的方式激活
-
-![](../assets/images/jetbrains-application-guide/activate-license-2.png)
-
-[^1]: [免费教育许可证 - 社区支持](https://www.jetbrains.com.cn/community/education)
-[^2]: [学生和教师授权申请方式 – 许可和购买常见问题解答](https://sales.jetbrains.com/hc/zh-cn/articles/207154369)
-[^3]: [2022 JetBrains 开发工具——学生授权免费申请指南 | The JetBrains Blog](https://blog.jetbrains.com/blog/2022/08/24/2022-jetbrains-student-program/)
+[^1]: [学生和教师授权申请方式 – 许可和购买常见问题解答](https://sales.jetbrains.com/hc/zh-cn/articles/207154369)
+[^2]: [2022 JetBrains 开发工具——学生授权免费申请指南 | The JetBrains Blog](https://blog.jetbrains.com/blog/2022/08/24/2022-jetbrains-student-program/)

@@ -6,6 +6,7 @@ theme:
   name: material
   language: zh
   favicon: assets/logo.png
+  custom_dir: overrides
 
   font:
     text: Roboto
@@ -37,31 +38,64 @@ theme:
     - navigation.tracking
     - navigation.top
     - navigation.tabs
-    - navigation.sections
     - navigation.indexes
     - toc.follow
     - search.suggest
     - search.highlight
-    - header.autohide
     - content.code.copy
     - content.code.annotate
     - content.tooltips
 
 nav:
-  - 主页: index.md
+  - 主页:
+    - index.md
   - 指南:
-      - 【WSL】安装与配置指南: 指南/wsl-guide.md
-      - 【OpenGL】安装与配置指南: 指南/opengl-guide.md
-      - 其他:
-        - 【JetBrains】教育许可证申请指南: 指南/jetbrains-application-guide.md
+    - guide/index.md
+  - WSL 安装与配置指南:
+    - guide/wsl/index.md
+    - 安装 WSL: guide/wsl/installation.md
+    - 配置 WSL: guide/wsl/configuration.md
+    - 管理 WSL: guide/wsl/management.md
+    - 软件安装与配置: guide/wsl/software-setup.md
+  - OpenGL 安装与配置指南:
+    - guide/opengl/index.md
+    - 获取 freeglut 与 GLEW: guide/opengl/install-freeglut-and-glew.md
+    - Visual Studio 环境配置:
+      - guide/opengl/environment-config/index.md
+      - 项目级环境配置（单项目）: guide/opengl/environment-config/project-level.md
+      - 项目属性表配置（跨项目）: guide/opengl/environment-config/project-property-sheet.md
+    - 设置系统环境变量: guide/opengl/setting-system-environment-variables.md
+    - OpenGL 绘图示例: guide/opengl/example.md
+  - JetBrains 教育许可证申请指南:
+    - guide/jetbrains-educational-license/index.md
+    - 注册 JetBrains 账号: guide/jetbrains-educational-license/register-account.md
+    - 申请教育许可证（官方文件）: guide/jetbrains-educational-license/apply-license.md
+    - 在 JetBrains IDE 激活许可证: guide/jetbrains-educational-license/activate-license.md
 
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Obelusod
+  analytics:
+    provider: google
+    property: G-XRVRK3LHY7
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: "这个页面很有帮助"
+          data: 1
+          note: >-
+            "感谢您的反馈！"
+        - icon: material/emoticon-sad-outline
+          name: "这个页面需要改进"
+          data: 0
+          note: >- 
+            "感谢您的反馈！"
 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/round.css
 
 markdown_extensions:
   - toc:
