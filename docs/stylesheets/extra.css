@@ -5,13 +5,8 @@
 
 /* 设置内容区域的左右内边距 */
 .md-content {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-/* 设置导航栏的宽度 */
-nav.md-nav {
-    width: 12rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
 }
 
 /* 隐藏侧边栏的滚动条 */
@@ -32,4 +27,10 @@ nav.md-nav {
 .md-typeset__table table:not([class]) {
   width: 100%;
   display: table;
+}
+
+/* 自定义表格默认垂直居中 */
+.md-typeset table:not([class]) td:not([align]), .md-typeset table:not([class]) th:not([align]) {
+    vertical-align: middle;
+    text-align: center;
 }

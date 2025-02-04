@@ -1,3 +1,7 @@
+---
+title: 配置 WSL
+---
+
 ## 认识 Linux Shell 终端
 
 !!! abstract "Linux Shell"
@@ -5,7 +9,7 @@
     在 WSL 中，大部分的操作都需要通过 **Linux Shell（Windows Terminal）**输入命令执行，而不像 Windows 系统一样使用图形界面，因此认识并熟练使用
     Shell 尤为重要。可以在 Windows 任意目录下按住 ++shift++ + 右键单击，在菜单中选择 **"在此处打开 Linux shell"** 打开终端。
 
-![](../../assets/images/wsl/linux-shell.png){: .shadow }
+![](../../assets/images/wsl/linux-shell.png)
 /// caption
 Linux 终端默认使用 Bash（Bourne-Again Shell）
 ///
@@ -35,7 +39,9 @@ Bash 命令提示符中，如 `obelus@Hyper-V:~$`、`root@mypc:/home#`
 
 ---
 
-## 更新软件源与更新软件包
+## 更新 Ubuntu 与软件
+
+### 更换软件源
 
 !!! info "国内镜像站"
 
@@ -58,7 +64,7 @@ Bash 命令提示符中，如 `obelus@Hyper-V:~$`、`root@mypc:/home#`
 
 以南京大学镜像站为例，选择相应的 Ubuntu 版本，并复制下方的镜像源
 
-![](../../assets/images/wsl/change-software-sources-1.png){: .shadow }
+![](../../assets/images/wsl/change-software-sources-1.png)
 
 ---
 
@@ -75,9 +81,15 @@ sudo vim /etc/apt/sources.list
 
 将配置文件内容全部替换为镜像源，并保存文件
 
-![](../../assets/images/wsl/change-software-sources-2.png){: .shadow }
+![](../../assets/images/wsl/change-software-sources-2.png)
 
 ---
+
+### 更新软件包
+
+!!! tip "获取最新软件包列表"
+    
+    每次更新/安装软件前，确保已获取最新的软件包列表
 
 更新软件包列表以获取最新版本
 

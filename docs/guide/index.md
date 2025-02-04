@@ -2,6 +2,7 @@
 title: 指南
 hide:
   - feedback
+  - footer
 ---
 
 <div class="grid cards" markdown>

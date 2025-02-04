@@ -39,6 +39,7 @@ theme:
     - navigation.top
     - navigation.tabs
     - navigation.indexes
+    - navigation.footer
     - toc.follow
     - search.suggest
     - search.highlight
@@ -47,23 +48,23 @@ theme:
     - content.tooltips
 
 nav:
-  - 主页:
-    - index.md
-  - 指南:
-    - guide/index.md
+  - 主页: index.md
+  - 指南: guide/index.md
   - WSL 安装与配置指南:
     - guide/wsl/index.md
     - 安装 WSL: guide/wsl/installation.md
     - 配置 WSL: guide/wsl/configuration.md
     - 管理 WSL: guide/wsl/management.md
-    - 软件安装与配置: guide/wsl/software-setup.md
+    - 软件安装与配置:
+      - guide/wsl/software-setup/index.md
+      - CUDA Toolkit (+cuDNN): guide/wsl/software-setup/cuda.md
   - OpenGL 安装与配置指南:
     - guide/opengl/index.md
-    - 获取 freeglut 与 GLEW: guide/opengl/install-freeglut-and-glew.md
+    - 获取 freeglut 与 GLEW: guide/opengl/download-freeglut-and-glew.md
     - Visual Studio 环境配置:
       - guide/opengl/environment-config/index.md
       - 项目级环境配置（单项目）: guide/opengl/environment-config/project-level.md
-      - 项目属性表配置（跨项目）: guide/opengl/environment-config/project-property-sheet.md
+      - 项目属性表配置（跨项目）: guide/opengl/environment-config/property-sheet.md
     - 设置系统环境变量: guide/opengl/setting-system-environment-variables.md
     - OpenGL 绘图示例: guide/opengl/example.md
   - JetBrains 教育许可证申请指南:
@@ -83,15 +84,15 @@ extra:
       title: Was this page helpful?
       ratings:
         - icon: material/emoticon-happy-outline
-          name: "这个页面很有帮助"
+          name: "很有帮助"
           data: 1
           note: >-
-            "感谢您的反馈！"
+            感谢反馈！
         - icon: material/emoticon-sad-outline
-          name: "这个页面需要改进"
+          name: "仍需改进"
           data: 0
           note: >- 
-            "感谢您的反馈！"
+            感谢反馈！
 
 extra_css:
   - stylesheets/extra.css

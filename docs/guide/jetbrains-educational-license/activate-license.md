@@ -1,3 +1,7 @@
+---
+title: 在 JetBrains IDE 激活许可证
+---
+
 以 CLion 为例，打开 CLion，在欢迎页面左下方点击更多按钮，并点击 **"管理许可证..."** 选项
 
 ![](../../assets/images/jetbrains-educational-license/activate-license-1.png)

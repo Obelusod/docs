@@ -1,3 +1,7 @@
+---
+title: 安装 WSL
+---
+
 在 Windows 搜索栏搜索 **"PowerShell"**，并右键点击 **"Windows PowerShell"**，选择 **"以管理员身份运行"**
 
 ![](../../assets/images/wsl/powershell.png)
@@ -14,7 +18,7 @@ wsl --list --online # (1)!
 
 1. 或 `wsl -l -o`
 
-![](../../assets/images/wsl/list-linux-distros.png){: .shadow }
+![](../../assets/images/wsl/list-linux-distros.png)
 
 ---
 
@@ -46,13 +50,13 @@ wsl --install -d [Distro] [Option] # (1)!
     
     详见：<https://learn.microsoft.com/zh-cn/windows/wsl/basic-commands#install>
 
-![](../../assets/images/wsl/install-ubuntu-1.png){: .shadow }
+![](../../assets/images/wsl/install-ubuntu-1.png)
 
 ---
 
 安装完成后，需要重启系统以应用更改（需要更新系统）
 
-![](../../assets/images/wsl/install-ubuntu-2.png){: .shadow }
+![](../../assets/images/wsl/install-ubuntu-2.png)
 
 ---
 
@@ -60,7 +64,7 @@ wsl --install -d [Distro] [Option] # (1)!
 
 > 如果并未启动也可以手动打开 Ubuntu 发行版
 
-![](../../assets/images/wsl/install-ubuntu-3.png){: .shadow }
+![](../../assets/images/wsl/install-ubuntu-3.png)
 
 ---
 
@@ -75,7 +79,7 @@ wsl --install -d [Distro] [Option] # (1)!
 
     用户名必须以英文开头，且全为小写，不宜过长
 
-![](../../assets/images/wsl/create-unix-user-1.png){: .shadow }
+![](../../assets/images/wsl/create-unix-user-1.png)
 
 ---
 
@@ -85,10 +89,10 @@ wsl --install -d [Distro] [Option] # (1)!
 
     在终端中要求输入密码时，为确保安全，输入的密码不会被显示
 
-![](../../assets/images/wsl/create-unix-user-2.png){: .shadow }
+![](../../assets/images/wsl/create-unix-user-2.png)
 
 ---
 
 创建用户后，将自动进入 Ubuntu 系统
 
-![](../../assets/images/wsl/create-unix-user-3.png){: .shadow }
+![](../../assets/images/wsl/create-unix-user-3.png)

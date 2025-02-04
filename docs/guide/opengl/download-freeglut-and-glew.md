@@ -1,3 +1,7 @@
+---
+title: 获取 freeglut 与 GLEW
+---
+
 ## 下载 freeglut
 
 !!! abstract "freeglut（Free OpenGL Utility Toolkit）"

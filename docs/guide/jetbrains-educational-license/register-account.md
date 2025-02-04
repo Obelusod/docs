@@ -1,3 +1,7 @@
+---
+title: 注册 JetBrains 账号
+---
+
 如果之前还未拥有 JetBrains 账号，需要在 [JetBrains 官方网站](https://account.jetbrains.com/login)进行注册 (1)
 { .annotate }
 
