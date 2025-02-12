@@ -6,7 +6,15 @@ title: 管理 WSL
 
 ### 查找 WSL 硬盘位置
 
-在 PowerShell 中输入并执行下列命令，需要将 `<distribution-name>` 替换为特定发行版名称（如 Ubuntu）
+在 PowerShell 中输入并执行下列命令
+
+<div class="annotate" markdown>
+
+> 需要将 `<distribution-name>` 替换为特定发行版名称（如 `Ubuntu`）(1)
+
+</div>
+
+1. 可以使用 `wsl --list` 命令列出所有 WSL 发行版
 
 ``` powershell
 (Get-ChildItem -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Lxss | Where-Object { $_.GetValue("DistributionName") -eq '<distribution-name>' }).GetValue("BasePath") + "\ext4.vhdx"

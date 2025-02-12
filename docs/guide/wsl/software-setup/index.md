@@ -21,8 +21,8 @@ title: 软件安装与配置
 
 !!! info "文本编辑器（Text Editor）"
 
-    当使用命令打开文本文件并编辑时，需要用到文本编辑器，WSL 的 Ubuntu 可能并未默认安装，主要推荐三款文本编辑器：Vim、Gedit 和 
-    GNOME Text Editor。
+    当使用命令打开文本文件并编辑时，需要用到文本编辑器，WSL 的 Ubuntu 可能并未默认安装，主要推荐三款文本编辑器：**Vim**、**Gedit** 和 
+    **GNOME Text Editor**。
 
     **本篇指南所有涉及文本编辑的命令，均使用具有图形界面的 `gedit` 编辑，可自行更换。**
 

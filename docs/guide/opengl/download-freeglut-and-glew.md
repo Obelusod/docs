@@ -4,7 +4,7 @@ title: 获取 freeglut 与 GLEW
 
 ## 下载 freeglut
 
-!!! abstract "freeglut（Free OpenGL Utility Toolkit）"
+!!! abstract "freeglut（Free OpenGL Utility Toolkit）[^1]"
 
     **freeglut** 是一个用于创建和管理 OpenGL 窗口的工具库，它是原始 GLUT（OpenGL Utility Toolkit）的一个免费的开源替代品，提供了更多功能和跨平台支持。通过
     freeglut 可以更轻松地创建窗口、处理输入事件、管理窗口的位置和大小等操作。
@@ -19,7 +19,7 @@ title: 获取 freeglut 与 GLEW
 在网站的 **"freeglut 3.0.0 MSVC Package"** 栏下，点击 **`Download freeglut 3.0.0 for MSVC`** 下载适用于
 Microsoft Visual C++（MSVC）的二进制文件
 
-!!! tip "如果需要使用最新版"
+!!! tip "使用最新版"
 
     在此网站下载的 freeglut 版本可能较旧，如需使用新版本可在 [Github](https://github.com/freeglut/freeglut)下载源文件自行编译
 
@@ -58,7 +58,7 @@ Microsoft Visual C++（MSVC）的二进制文件
 
 ## 下载 GLEW
 
-!!! abstract "GLEW（OpenGL Extension Wrangler Library）"
+!!! abstract "GLEW（OpenGL Extension Wrangler Library）[^2]"
     **GLEW** 是一个开源的、跨平台的 C/C++ 库，用于管理 OpenGL 的扩展。在实际的 OpenGL 开发中，有许多功能是由扩展提供的，而 GLEW
     可以帮助我们轻松地管理这些扩展。它提供了一组简洁的接口，方便我们查询、加载和管理 OpenGL 的扩展，使得在不同平台上编写 OpenGL 代码变得更加简单和统一。
 
@@ -114,3 +114,6 @@ Microsoft Visual C++（MSVC）的二进制文件
     - `LICENSE.txt`：许可证文件
 
 ![](../../assets/images/opengl/glew-files.png)
+
+[^1]: [The freeglut Project](https://freeglut.sourceforge.net)
+[^2]: [OpenGL - The Industry Standard for High Performance Graphics](https://www.opengl.org)

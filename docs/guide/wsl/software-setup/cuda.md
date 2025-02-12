@@ -132,7 +132,7 @@ sudo apt-key del 7fa2af80
 
         目前兼容性最佳的版本为：`CUDA Toolkit 11.8`
     
-    ![](../../../assets/images/wsl/cuda-toolkit-archive.png)
+    ![](../../../assets/images/guide/cuda-toolkit-archive.png)
     
     ---
     
@@ -177,7 +177,7 @@ export PATH=/usr/local/cuda-x.x/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-x.x/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
 
-![](../../../assets/images/ubuntu/bashrc-cuda.png)
+![](../../../assets/images/guide/bashrc-cuda.png)
 
 ---
 
@@ -291,13 +291,13 @@ sudo apt install zlib1g
 
     访问 [cuDNN Archive 官网](https://developer.nvidia.com/cudnn-archive)，选择一个合适的版本
 
-    ![](../../../assets/images/ubuntu/cudnn-archive.png)
+    ![](../../../assets/images/guide/cudnn-archive.png)
 
     ---
 
     选择目标平台的操作系统、架构、发行版，其中，**安装类型选择 `deb (local)`**
 
-    ![](../../../assets/images/ubuntu/cudnn-download-1.png)
+    ![](../../../assets/images/guide/cudnn-download-1.png)
 
     /// caption
     图中，以 cuDNN 9.7.1 为例
@@ -307,7 +307,7 @@ sudo apt install zlib1g
 
     依照所选 Installer Type（安装类型）的安装命令进行安装
 
-    ![](../../../assets/images/ubuntu/cudnn-download-2.png)
+    ![](../../../assets/images/guide/cudnn-download-2.png)
 
     /// caption
     图中，以 cuDNN 9.7.1 为例
@@ -344,6 +344,8 @@ sudo make clean && sudo make
 ---
 
 如果运行结果提示 `Test passed!`，则说明已正确安装 cuDNN
+
+![](../../../assets/images/guide/mnistCUDNN.png)
 
 [^1]: [NVIDIA CUDA Installation Guide for Linux | WSL](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#wsl)
 [^2]: [Installing cuDNN Backend on Linux — NVIDIA cuDNN Installation](https://docs.nvidia.com/deeplearning/cudnn/installation/latest/linux.html)
