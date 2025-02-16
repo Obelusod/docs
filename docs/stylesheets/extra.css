@@ -29,8 +29,13 @@
   display: table;
 }
 
-/* 自定义表格默认垂直居中 */
+/* 设置表格默认垂直居中 */
 .md-typeset table:not([class]) td:not([align]), .md-typeset table:not([class]) th:not([align]) {
     vertical-align: middle;
     text-align: center;
+}
+
+/* 设置反馈提示的样式 */
+.md-feedback__title {
+    font-size: smaller;
 }

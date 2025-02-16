@@ -9,7 +9,7 @@ theme:
   custom_dir: overrides
 
   font:
-    text: Roboto
+    text: Noto Sans Simplified Chinese
     code: JetBrains Mono
 
   palette:
@@ -81,7 +81,7 @@ extra:
     provider: google
     property: G-XRVRK3LHY7
     feedback:
-      title: Was this page helpful?
+      title: 此页面是否有帮助？
       ratings:
         - icon: material/emoticon-happy-outline
           name: "很有帮助"
@@ -148,5 +148,8 @@ plugins:
         - zh
         - en
   - glightbox
+  - social:
+      cards_layout_options:
+        font_family: Noto Sans SC
 
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
