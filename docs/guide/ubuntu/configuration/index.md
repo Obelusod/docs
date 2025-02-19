@@ -1,19 +1,36 @@
 ---
-title: 软件安装与配置
+title: 配置 Ubuntu
 ---
 
-!!! abstract "WSL 配置差异"
+## Linux 终端
 
-    大部分软件的安装和配置均与其他 Ubuntu 发行版相同，但需要注意以下两点：
-    
-    - WSL 主要以 Shell 环境与 [Windows Terminal](https://learn.microsoft.com/zh-cn/windows/terminal/) 交互使用，**对 WSL 上的
-      GUI 应用的支持不提供完整的桌面体验**，它依赖于 Windows 桌面，因此可能不支持安装以桌面为中心的工具或应用。
-    - 某些硬件驱动（如 NVIDIA 显卡驱动）会**直接调用 Windows 所安装的版本（而无需另行安装）**，如果在 WSL 安装适用于 Linux
-      的版本可能会出现问题。
+!!! abstract "Linux Shell"
 
-    !!! tip ""
+    在 Ubuntu 系统中，大部分的操作都需要通过 **Shell** 终端输入命令执行，而不像 Windows 系统一样使用图形界面，因此认识并熟练使用
+    Shell 尤为重要。可以在任意目录下右键单击，在菜单中选择 "Open in Terminal"（在终端中打开）或使用快捷键 ++ctrl+alt+t++ 打开终端。
 
-        除了 NVIDIA 显卡驱动 和 CUDA Toolkit 的安装方式不同外，**其他均可参考一般 Linux 发行版的[软件安装与配置](../../ubuntu/software-setup/index.md)**
+![](../../../assets/images/ubuntu/bash.png)
+
+/// caption
+Ubuntu 终端默认使用 Bash（Bourne-Again Shell）
+///
+
+---
+
+Bash 命令提示符中，如 `vmware@vmwaretest:~$`、`root@mypc:/home#`
+
+- `vmware`、`root`：当前用户名
+- `vmwaretest`、`mypc`：当前主机名
+- `~`、`/home`：当前路径（工作目录）
+- `$`：表示终端准备接收命令输入
+- `#`：表示正在使用管理员用户（root）权限
+
+!!! tip "Shell 使用提示"
+
+    - 在终端中要求输入密码时，为确保安全，输入的密码不会被显示。
+    - Bash 提供了命令自动补全功能，按下 ++tab++ 键可以根据当前已输入到字符自动补全完整的命令/参数/路径。
+
+    建议参考：[Linux 常用命令学习 | 菜鸟教程](https://www.runoob.com/w3cnote/linux-common-command-2.html)
 
 ---
 
@@ -25,11 +42,6 @@ title: 软件安装与配置
     **GNOME Text Editor**。
 
     **本篇指南所有涉及文本编辑的命令，均使用具有图形界面的 `gedit` 编辑，可自行更换。**
-
-!!! warning "中文乱码问题"
-
-    在 WSL Ubuntu 中使用图形化文本编辑器（如 Gedit 和 GNOME Text Editor），打开含有中文字符的文本文件时可能会出现乱码，
-    可以通过**设置字符编码**、**安装中文字体**等方法解决。
 
 === "Vim"
 

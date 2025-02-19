@@ -50,6 +50,30 @@ theme:
 nav:
   - 主页: index.md
   - 指南: guide/index.md
+  - Ubuntu 安装与配置指南:
+    - guide/ubuntu/index.md
+    - 获取系统镜像: guide/ubuntu/download-iso.md
+    - 制作启动 U 盘: guide/ubuntu/create-boot-usb.md
+    - 准备磁盘分区: guide/ubuntu/boot-and-disk.md
+    - 安装 Ubuntu: guide/ubuntu/installation.md
+    - 配置 Ubuntu:
+      - guide/ubuntu/configuration/index.md
+      - guide/ubuntu/configuration/update-ubuntu-and-software.md
+      - guide/ubuntu/configuration/set-root-password.md
+      - guide/ubuntu/configuration/install-nvidia-drivers.md
+      - guide/ubuntu/configuration/remove-snap-packages.md
+      - guide/ubuntu/configuration/localize-user-directories.md
+      - guide/ubuntu/configuration/change-default-boot-entry.md
+      - guide/ubuntu/configuration/sync-dual-system-time.md
+      - guide/ubuntu/configuration/adjust-high-dpi-scaling.md
+      - guide/ubuntu/configuration/install-common-fonts.md
+      - guide/ubuntu/configuration/battery-charge-management.md
+    - 软件安装与配置:
+      - guide/ubuntu/software-setup/index.md
+      - 开发工具:
+        - Pip: guide/ubuntu/software-setup/pip.md
+        - Anaconda: guide/ubuntu/software-setup/conda.md
+        - CUDA Toolkit (+cuDNN): guide/ubuntu/software-setup/cuda.md
   - WSL 安装与配置指南:
     - guide/wsl/index.md
     - 安装 WSL: guide/wsl/installation.md
