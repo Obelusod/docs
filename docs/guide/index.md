@@ -11,7 +11,7 @@ hide:
 
     ---
 
-    从镜像下载、启动盘制作到系统安装与优化，涵盖双系统配置、显卡驱动安装、开发环境搭建（CUDA、Python、C++库）及系统优化技巧，为开发者提供完整解决方案
+    从镜像下载、启动盘制作到系统安装与优化，包括双系统配置、显卡驱动安装、开发环境搭建（CUDA、Python、C++库）及系统优化技巧，为开发者提供完整解决方案
 
     [:octicons-arrow-right-24: 点击阅读](ubuntu/index.md)
 
@@ -19,7 +19,7 @@ hide:
 
     ---
 
-    在 Windows 中通过 WSL 无缝运行 Ubuntu，涵盖快速部署、跨文件系统协作、GPU 加速支持及开发工具链配置（如 CUDA 与 Python 环境），实现 Windows 与 Linux 的高效协同
+    在 Windows 中通过 WSL 无缝运行 Ubuntu，快速部署、跨文件系统协作、GPU 加速支持及开发工具链配置（如 CUDA 与 Python 环境），实现 Windows 与 Linux 的高效协同
 
     [:octicons-arrow-right-24: 点击阅读](wsl/index.md)
 
@@ -31,11 +31,19 @@ hide:
 
     [:octicons-arrow-right-24: 点击阅读](opengl/index.md)
 
+-   :material-android:{ .lg .middle } __Android Studio 安装与配置指南__
+
+    ---
+
+    详细介绍如何安装与配置 Android Studio 开发环境，包括下载与安装 Android Studio、设置虚拟设备（AVD）、配置 SDK 组件、创建并配置 Android 项目
+
+    [:octicons-arrow-right-24: 点击阅读](android-studio/index.md)
+
 -   :simple-jetbrains:{ .lg .middle } __JetBrains 教育许可证申请__
 
     ---
 
-    通过学信网验证学籍并申请免费教育许可证，涵盖账号注册、文件提交与许可证激活全流程，助力学生与教师合法获取 JetBrains 全系列开发工具
+    通过学信网验证学籍并申请免费教育许可证，如何注册账号、文件提交与许可证激活全流程，助力学生合法获取 JetBrains 全系列开发工具
 
     [:octicons-arrow-right-24: 点击阅读](jetbrains-educational-license/index.md)
 

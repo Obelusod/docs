@@ -39,7 +39,7 @@ title: 安装 Ubuntu
 
 !!! info "引导启动"
     
-    安装 Ubuntu 系统需要从引导盘（U盘）使用 ISO 镜像安装
+    安装 Ubuntu 系统需要从引导盘（U盘）使用 ISO 镜像安装。
 
 === "在 BIOS/Boot Manager 启动"
 
@@ -80,7 +80,7 @@ title: 安装 Ubuntu
 
 !!! info "Ventoy 镜像"
 
-    从 U 盘启动引导后，Ventoy 会自动查找镜像文件，并进入 Ventoy 的镜像选择菜单界面
+    从 U 盘启动引导后，Ventoy 会自动查找镜像文件，并进入 Ventoy 的镜像选择菜单界面。
 
 在 Ventoy 选择菜单中，选择需要安装的 Ubuntu 镜像文件（`ubuntu-xx.xx.x-desktop-amd64.iso`）
 
@@ -191,9 +191,10 @@ title: 安装 Ubuntu
 
 !!! warning "开源显卡驱动"
 
-    如果不勾选 `Install third-party software for graphics and Wi-Fi hardware`，将会默认使用开源的显卡驱动（Xorg）。
+    如果勾选 `Install third-party software for graphics and Wi-Fi hardware`，将会安装第三方专有驱动（如
+    NVIDIA 驱动），否则将默认使用开源的显卡驱动（Xorg）。
 
-    其中，显卡驱动（如 NVIDIA 驱动）可能会默认安装非最新稳定版本，如出现问题可以在后续更换。
+    另外，勾选后安装的第三方专有驱动（如 NVIDIA 驱动）可能会默认安装非最新稳定版本，如出现问题可以在后续更换。
 
 ![](../../assets/images/ubuntu/ubuntu-installation-8.png)
 
@@ -203,11 +204,12 @@ title: 安装 Ubuntu
 
 根据实际情况选择安装类型和磁盘分区
 
-!!! question "硬盘设置"
+!!! question "选择安装类型"
 
-    - 如果安装双系统或自定义分区，选择 **"Manual installation"**（手动安装/分区），自定义磁盘分区
-    - 如果仅使用 Ubuntu 系统，选择 **"Erase disk and install Ubuntu"**（擦除磁盘并安装 Ubuntu）
-    - 如果已有 Windows 系统且需要安装双系统，可以选择 **"Install Ubuntu alongside Windows Boot Manager and Ubuntu 24.04 LTS"**，保留 Windows 相关文件并与 Ubuntu 共存，将会自动进行分区
+    - 如果已有 Windows 系统且需要安装双系统，可以选择 **"Install Ubuntu alongside Windows Boot Manager
+    and Ubuntu 24.04 LTS"**，保留 Windows 相关文件并与 Ubuntu 共存，将会自动进行分区。
+    - 如果安装双系统或自定义分区，选择 **"Manual installation"**（手动安装/分区），自定义磁盘分区。
+    - 如果仅使用 Ubuntu（不存在 Windows 系统），选择 **"Erase disk and install Ubuntu"**（擦除磁盘并安装 Ubuntu）。
 
 ![](../../assets/images/ubuntu/ubuntu-installation-9.png)
 
@@ -215,7 +217,7 @@ title: 安装 Ubuntu
 
 !!! example "手动分区"
 
-    以下步骤为自定义分区，即选择 "Manual installation"（手动安装）的情况。
+    以下步骤为自定义分区，即选择 **"Manual installation"**（手动安装）的情况。
 
 选择一块磁盘的 **"Free space"**（空闲区）(1)，注意不同磁盘分区的命名差异
 { .annotate }
@@ -228,11 +230,11 @@ title: 安装 Ubuntu
     - `/dev/sdb2`：第2块 ^^**SATA/SCSI/USB 硬盘**^^（`b`）的第2块分区（`2`）
     - `/dev/nvme0n1p1`：第1块 ^^**NVMe 硬盘**^^（`nvme0`）的第1个命名空间（`n1`）的第1块分区（`p1`）
     - `/dev/nvme1n1p2`：第2块 ^^**NVMe 硬盘**^^（`nvme1`）的第1个命名空间（`n1`）的第2块分区（`p2`）
-    - 以此类推......
+    - ......以此类推
 
-!!! warning "正确选择硬盘空闲区"
+!!! warning "注意正确选择硬盘空闲区"
 
-    如果有两块或两块以上的硬盘，例如想要将 Ubuntu 安装在第二块硬盘，务必注意应选择**第二块硬盘下方**的空闲区（Free space）！
+    如果有两块或两块以上的硬盘，例如想要将 Ubuntu 安装在第二块硬盘，务必选择**第二块硬盘下方**的空闲区（`Free space`）！
 
 ![](../../assets/images/ubuntu/ubuntu-installation-10.png)
 
@@ -265,11 +267,11 @@ title: 安装 Ubuntu
 
 ??? info "常用分区方案（GPT，200 GB）"
 
+    以下分区方案仅供参考，可以根据具体需求适当调整，或是减少/增加独立分区，例如不单独分配 `/home` 分区，或增加 `/usr`、`/var` 分区。
+
     一般而言，如果电脑内存为 16GB 或以上，`swap` 分区可以不分配或少分配（日常使用基本不会占满）。
 
     对于根目录 `/` 和用户主目录 `/home`，建议用剩余的所有空间以 4:6 或 5:5 比例分配，两者至少为 20GB。
-
-    以下分区方案仅供参考，可以根据具体需求适当调整，或是减少/增加独立分区，例如不单独分配 `/home` 分区，或增加 `/usr`、`/var` 分区。
 
     <table><thead>
       <tr>
@@ -311,7 +313,7 @@ title: 安装 Ubuntu
 
 !!! tip "Ubuntu 24.04 建议仅划分出根挂载点"
 
-    在 Ubuntu 24.04 之后，引导分区会自动分配大小，因此建议**仅划分出根挂载点 `/`** 即可
+    在 Ubuntu 24.04 之后，引导分区会自动分配大小，因此建议**仅划分出根挂载点 `/`** 即可。
 
 ---
 
@@ -357,7 +359,7 @@ title: 安装 Ubuntu
 !!! tip "自动选择镜像站"
 
     选择位置（Location）后，如果先前连接了网络将会自动将软件源更换至选定位置附近的镜像源，例如
-    Shanghai（上海）区域可能会选择 "清华大学镜像站"（tsinghua）
+    `Shanghai`（上海）时区可能会选择 "清华大学镜像站"（tsinghua）。
 
 ![](../../assets/images/ubuntu/ubuntu-installation-15.png)
 

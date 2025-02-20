@@ -21,7 +21,9 @@ title: 同步双系统时间
     
     </div>
 
-    使用 `timedatectl status` 命令，可以查看系统时间状态
+    !!! tip ""
+
+        使用 `timedatectl status` 命令，可以查看系统时间状态
 
 !!! example "两种时钟配置方式"
 

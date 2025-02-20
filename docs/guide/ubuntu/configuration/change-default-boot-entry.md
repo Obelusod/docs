@@ -57,9 +57,9 @@ title: 更改开机默认启动项
 
     !!! info "GRUB 菜单选项"
 
-        每段首行的 `menuentry` 和 `submenu` 分别按顺序对应一级菜单的选项，其中 `submenu` 二级菜单下还有多个选项
+        每段首行的 `menuentry` 和 `submenu` 分别按顺序对应一级菜单的选项，其中 `submenu` 二级菜单下还有多个选项。
 
-        单引号 `''` 内即为启动项的名称（如 `Windows Boot Manager (on /dev/nvme0n1p1)` ），可以根据此名称设置默认启动项
+        单引号 `''` 内即为启动项的名称（如 `Windows Boot Manager (on /dev/nvme0n1p1)` ），可以根据此名称设置默认启动项。
     
     ![](../../../assets/images/ubuntu/grub-menu.png)
 
@@ -83,7 +83,9 @@ title: 更改开机默认启动项
 
         `GRUB_DEFAULT="1>2"`
         
-        如果 Ubuntu 系统为中文，其启动项的名称也会使用中文
+        !!! tip ""
+
+            如果 Ubuntu 系统为中文，其启动项的名称也为中文
 
     ![](../../../assets/images/ubuntu/edit-grub-file.png)
 

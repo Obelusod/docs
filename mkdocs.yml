@@ -91,6 +91,10 @@ nav:
       - 项目属性表配置（跨项目）: guide/opengl/environment-config/property-sheet.md
     - 设置系统环境变量: guide/opengl/setting-system-environment-variables.md
     - OpenGL 绘图示例: guide/opengl/example.md
+  - Android Studio 安装与配置指南:
+    - guide/android-studio/index.md
+    - 安装 Android Studio: guide/android-studio/installation.md
+    - 创建 Android 项目: guide/android-studio/create-project.md
   - JetBrains 教育许可证申请指南:
     - guide/jetbrains-educational-license/index.md
     - 注册 JetBrains 账号: guide/jetbrains-educational-license/register-account.md
