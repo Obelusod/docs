@@ -144,7 +144,7 @@ title: 安装 Android Studio
 
 ## Android Studio 文件目录
 
-!!! info "Android Studio 涉及的所有默认文件目录"
+!!! info "Android Studio 涉及的所有文件目录"
 
     - **Android Studio**
         - `${安装根目录}\Android\Android Studio`

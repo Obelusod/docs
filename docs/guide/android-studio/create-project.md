@@ -1,5 +1,5 @@
 ---
-title: 创建 Android 项目
+title: 创建 Android 项目（Phone）
 ---
 
 打开 Android Studio，在欢迎页选择 **"New Project"** 新建项目
@@ -20,7 +20,7 @@ title: 创建 Android 项目
 
 在项目配置界面，按照以下要求设置，并点击 **"Finish"** 完成
 
-!!! example "项目配置"
+!!! example "推荐项目配置"
 
     - **Language**：`Java`
     - **Minimum SDK**：`API 24 ("Nougat"; Android 7.0)`
@@ -87,7 +87,7 @@ title: 创建 Android 项目
 
 ---
 
-根据开发所需的 Android 版本和 API 级别等选择一个系统镜像，并点击左侧 **"下载"** 图标执行下载安装
+根据开发所需的 Android 和 API 版本选择一个系统镜像，并点击左侧 **"Download"** 图标执行下载安装
 
 !!! example ""
 
@@ -135,13 +135,13 @@ AVD 配置保持默认即可，点击 **"Finish"** 完成创建
 
 ---
 
-在 **"SDK Platforms"**（SDK 平台）栏下，勾选设备对应 Android 版本号的 SDK，并点击 **"Apply"** 应用
+在 **"SDK Platforms"**（SDK 平台）栏下，勾选设备对应 Android 版本的 SDK，点击 **"Apply"** 应用
 
 ![](../../assets/images/android-studio/install-sdk-2.png)
 
 ---
 
-点击 **"OK"** 确认应用更改，开始下载和安装
+再点击 **"OK"** 确认应用更改，开始下载和安装
 
 ![](../../assets/images/android-studio/install-sdk-3.png)
 
@@ -155,7 +155,7 @@ AVD 配置保持默认即可，点击 **"Finish"** 完成创建
 
 ## 构建并运行 Android 应用
 
-必要的 SDK 组件安装完成后，点击上方绿色的 **"Run"**（运行）按钮开始构建和运行 Android 应用
+安装完虚拟设备和 SDK 后，点击上方绿色的 **"Run"**（运行）按钮开始构建和运行 Android 应用
 
 ![](../../assets/images/android-studio/run-app-1.png)
 
@@ -173,7 +173,7 @@ AVD 配置保持默认即可，点击 **"Finish"** 完成创建
 项目构建完成后，会自动运行选择的 Android 设备（首次开机可能需要较长时间），并在设备中运行本项目的应用程序（`Hello, World!`）(1)
 { .annotate }
 
-1. 可以在右侧侧边栏中点击 **"Running Devices"** 图标，查看当前运行中的设备
+1. 可以在右侧边栏中点击 **"Running Devices"** 图标，查看当前运行中的设备
 
 ![](../../assets/images/android-studio/run-app-3.png)
 
@@ -181,7 +181,7 @@ AVD 配置保持默认即可，点击 **"Finish"** 完成创建
 
 ## 查看 XML 布局代码
 
-打开 `activity_main.xml` 文件，默认是视图为 Design 预览模式，可以在右上方分别切换 **"Code"**（代码）、**"Split"**（分离）、**"Design"**（设计）三个视图
+打开 `activity_main.xml` 文件，默认是视图为 **"Design"** 预览模式，可以在右上方分别切换 **"Code"**（代码）、**"Split"**（分离）、**"Design"**（设计）三个视图
 
 ![](../../assets/images/android-studio/view-xml-1.png)
 
