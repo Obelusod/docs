@@ -88,14 +88,12 @@ title: 安装 Android Studio
 
     - **Android SDK**：Android 软件开发工具包，包含了开发 Android 应用程序所需的工具、库和样例代码，提供了开发者所需的 API、调试工具和其他必要的资源。
     - **Android SDK Platform**：Android 操作系统的软件开发包，包含了特定版本的 Android 系统的 API 级别和系统图像，开发者可以利用这些平台来编写、编译和运行针对特定 Android 版本的应用程序。
-    - **Performance (Interl HAXM)**：Intel 硬件加速执行管理器是一个可选的性能组件，它可以在 Intel 处理器的计算机上加速 Android 模拟器的性能，提高 Android 模拟器的运行速度。
     - **Performance (Android Emulator hypervisor driver)**：Android 模拟器虚拟化驱动程序是另一个可选的性能组件，它提供了一种虚拟化技术来改善 Android 模拟器的性能，借助这个组件可以在模拟器中更快速地运行和测试应用程序。
     - **Android Virtual Device**：Android Virtual Device（AVD）是 Android 模拟器的配置模拟器，可以模拟不同类型和版本的 Android 设备，创建不同配置的 AVD 来测试应用在不同设备上的运行情况，以确保应用的兼容性和稳定性。
 
     !!! warning ""
 
-        其中，`Performance (Interl HAXM)` 和 `Performance (Android Emulator hypervisor driver)` 只需选择两者之一进行安装即可；
-        如果安装失败或无法选中可以先不勾选，之后再另行安装。
+        如果 `Performance (Android Emulator hypervisor driver)` 安装失败或无法选中可以先不勾选，之后再另行安装
 
 !!! tip "更改 SDK 安装位置"
 

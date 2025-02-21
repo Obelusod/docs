@@ -81,13 +81,13 @@ title: 创建 Android 项目（Phone）
 
 ---
 
-在虚拟设备配置界面选择 **"Phone"** 类中的任意竖屏手机设备（如 `Pixel 8 Pro`），并点击 **"Next"** 下一步
+在设备配置界面，选择 **"Phone"** 类中的任意手机设备（如 `Pixel 8 Pro`），并点击 **"Next"** 下一步
 
 ![](../../assets/images/android-studio/add-device-2.png)
 
 ---
 
-根据开发所需的 Android 和 API 版本选择一个系统镜像，并点击左侧 **"Download"** 图标执行下载安装
+根据开发所需的 Android 和 API 版本选择一个系统镜像，点击左侧 **"Download"** 图标下载安装
 
 !!! example ""
 
@@ -155,7 +155,7 @@ AVD 配置保持默认即可，点击 **"Finish"** 完成创建
 
 ## 构建并运行 Android 应用
 
-安装完虚拟设备和 SDK 后，点击上方绿色的 **"Run"**（运行）按钮开始构建和运行 Android 应用
+安装完虚拟设备和 SDK 后，点击上方的 **"Run"**（运行）按钮开始构建和运行 Android 应用
 
 ![](../../assets/images/android-studio/run-app-1.png)
 

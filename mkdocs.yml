@@ -94,7 +94,7 @@ nav:
   - Android Studio 安装与配置指南:
     - guide/android-studio/index.md
     - 安装 Android Studio: guide/android-studio/installation.md
-    - 创建 Android 项目: guide/android-studio/create-project.md
+    - 创建 Android 项目（Phone）: guide/android-studio/create-project.md
   - JetBrains 教育许可证申请指南:
     - guide/jetbrains-educational-license/index.md
     - 注册 JetBrains 账号: guide/jetbrains-educational-license/register-account.md
