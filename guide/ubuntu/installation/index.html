@@ -1,0 +1,2667 @@
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Obelus">
+      
+      
+        <link rel="canonical" href="https://obelus.cc/guide/ubuntu/installation/">
+      
+      
+        <link rel="prev" href="../boot-and-disk/">
+      
+      
+        <link rel="next" href="../configuration/">
+      
+      
+      <link rel="icon" href="../../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+    
+    
+      
+        <title>安装 Ubuntu - Obelisk Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m3 11-2 4h-3l2-4H9V7h6z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Simplified+Chinese:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans Simplified Chinese";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/round.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XRVRK3LHY7"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XRVRK3LHY7",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XRVRK3LHY7",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="安装 Ubuntu - Obelisk Docs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://obelus.cc/assets/images/social/guide/ubuntu/installation.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://obelus.cc/guide/ubuntu/installation/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="安装 Ubuntu - Obelisk Docs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://obelus.cc/assets/images/social/guide/ubuntu/installation.png" >
+      
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#禁用-secure-boot-功能" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Obelisk Docs" class="md-header__button md-logo" aria-label="Obelisk Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 7.5-6.47-.54L14 1l-2.53 5.96L5 7.5l4.9 4.27-1.46 6.33L14 14.74l5.56 3.36-1.47-6.33zm-6.86 4.73.4 1.71-1.51-.91-1.03-.62-1.03.62-1.51.91.39-1.71.28-1.18-.91-.79L9.88 9.1l1.76-.15 1.2-.1.47-1.11.69-1.62.69 1.62.47 1.11 1.2.1 1.75.15-1.33 1.16-.92.79zM1.16 12c-.299-.5-.171-1.11.29-1.41l2.73-1.8 1.57 1.36-3.2 2.11c-.17.11-.36.17-.55.17-.32 0-.64-.16-.84-.43m.29 8.16 5.86-3.85L7 17.76l-.34 1.37-4.11 2.71c-.17.11-.36.16-.55.16-.32 0-.64-.16-.84-.45a1.013 1.013 0 0 1 .29-1.39m5.87-8.66.92.81-.27 1.19-5.42 3.55c-.17.11-.36.16-.55.16-.32 0-.64-.15-.84-.45a1 1 0 0 1 .29-1.38z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Obelisk Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              安装 Ubuntu
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+  
+
+  <nav
+    class="md-tabs"
+    aria-label="标签"
+    data-md-component="tabs"
+  >
+    <div class="md-grid">
+      <ul class="md-tabs__list">
+        <!-- 顶部导航栏仅显示特定项 -->
+        
+          
+            
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  主页
+
+      </a>
+    </li>
+  
+
+          
+        
+          
+            
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+    
+  
+  指南
+
+      </a>
+    </li>
+  
+
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </nav>
+
+
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Obelisk Docs" class="md-nav__button md-logo" aria-label="Obelisk Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 7.5-6.47-.54L14 1l-2.53 5.96L5 7.5l4.9 4.27-1.46 6.33L14 14.74l5.56 3.36-1.47-6.33zm-6.86 4.73.4 1.71-1.51-.91-1.03-.62-1.03.62-1.51.91.39-1.71.28-1.18-.91-.79L9.88 9.1l1.76-.15 1.2-.1.47-1.11.69-1.62.69 1.62.47 1.11 1.2.1 1.75.15-1.33 1.16-.92.79zM1.16 12c-.299-.5-.171-1.11.29-1.41l2.73-1.8 1.57 1.36-3.2 2.11c-.17.11-.36.17-.55.17-.32 0-.64-.16-.84-.43m.29 8.16 5.86-3.85L7 17.76l-.34 1.37-4.11 2.71c-.17.11-.36.16-.55.16-.32 0-.64-.16-.84-.45a1.013 1.013 0 0 1 .29-1.39m5.87-8.66.92.81-.27 1.19-5.42 3.55c-.17.11-.36.16-.55.16-.32 0-.64-.15-.84-.45a1 1 0 0 1 .29-1.38z"/></svg>
+
+    </a>
+    Obelisk Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    主页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    指南
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Ubuntu 安装与配置指南
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ubuntu 安装与配置指南
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download-iso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    获取系统镜像
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-boot-usb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    制作启动 U 盘
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../boot-and-disk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    准备磁盘分区
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    安装 Ubuntu
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    安装 Ubuntu
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#禁用-secure-boot-功能" class="md-nav__link">
+    <span class="md-ellipsis">
+      禁用 Secure Boot 功能
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#从-u-盘启动引导" class="md-nav__link">
+    <span class="md-ellipsis">
+      从 U 盘启动引导
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#选择-ubuntu-镜像文件" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择 Ubuntu 镜像文件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu-安装配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu 安装配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ubuntu 安装配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#系统语言language" class="md-nav__link">
+    <span class="md-ellipsis">
+      系统语言（Language）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#可访问性accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      可访问性（Accessibility）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#键盘布局keyboard-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      键盘布局（Keyboard Layout）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#网络连接internet-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络连接（Internet Connection）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#安装类型type-of-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装类型（Type of Installation）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#应用程序applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用程序（Applications）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#专有软件proprietary-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      专有软件（Proprietary Software）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#磁盘与分区disk-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      磁盘与分区（Disk Setup）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#设置账户account" class="md-nav__link">
+    <span class="md-ellipsis">
+      设置账户（Account）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#选择时区timezone" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择时区（Timezone）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#确认安装install" class="md-nav__link">
+    <span class="md-ellipsis">
+      确认安装（Install）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#重启系统restart" class="md-nav__link">
+    <span class="md-ellipsis">
+      重启系统（Restart）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../configuration/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    配置 Ubuntu
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            配置 Ubuntu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/update-ubuntu-and-software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    更新 Ubuntu 与软件
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/set-root-password/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    设置 Root 用户密码
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/install-nvidia-drivers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安装 NVIDIA 显卡驱动
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/remove-snap-packages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    卸载 Snap 组件及其软件包
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/localize-user-directories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    更改用户文件夹本地化
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/change-default-boot-entry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    更改开机默认启动项
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/sync-dual-system-time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    同步双系统时间
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/adjust-high-dpi-scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    调整高分辨率缩放
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/install-common-fonts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安装常用字体
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/battery-charge-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    电池充电管理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../software-setup/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    软件安装与配置
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            软件安装与配置
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7_2" id="__nav_3_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    开发工具
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            开发工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software-setup/pip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software-setup/conda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anaconda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software-setup/cuda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CUDA Toolkit (+cuDNN)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../wsl/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    WSL 安装与配置指南
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            WSL 安装与配置指南
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wsl/installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安装 WSL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wsl/configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    配置 WSL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wsl/management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    管理 WSL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../wsl/software-setup/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    软件安装与配置
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            软件安装与配置
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wsl/software-setup/cuda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CUDA Toolkit (+cuDNN)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../opengl/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    OpenGL 安装与配置指南
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            OpenGL 安装与配置指南
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opengl/download-freeglut-and-glew/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    获取 freeglut 与 GLEW
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../opengl/environment-config/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Visual Studio 环境配置
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Visual Studio 环境配置
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opengl/environment-config/project-level/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    项目级环境配置（单项目）
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opengl/environment-config/property-sheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    项目属性表配置（跨项目）
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opengl/setting-system-environment-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    设置系统环境变量
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opengl/example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenGL 绘图示例
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../android-studio/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Android Studio 安装与配置指南
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Android Studio 安装与配置指南
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android-studio/installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安装 Android Studio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android-studio/create-project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    创建 Android 项目（Phone）
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../jetbrains-educational-license/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    JetBrains 教育许可证申请指南
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            JetBrains 教育许可证申请指南
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jetbrains-educational-license/register-account/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    注册 JetBrains 账号
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jetbrains-educational-license/apply-license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    申请教育许可证（官方文件）
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jetbrains-educational-license/activate-license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    在 JetBrains IDE 激活许可证
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#禁用-secure-boot-功能" class="md-nav__link">
+    <span class="md-ellipsis">
+      禁用 Secure Boot 功能
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#从-u-盘启动引导" class="md-nav__link">
+    <span class="md-ellipsis">
+      从 U 盘启动引导
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#选择-ubuntu-镜像文件" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择 Ubuntu 镜像文件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu-安装配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu 安装配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ubuntu 安装配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#系统语言language" class="md-nav__link">
+    <span class="md-ellipsis">
+      系统语言（Language）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#可访问性accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      可访问性（Accessibility）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#键盘布局keyboard-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      键盘布局（Keyboard Layout）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#网络连接internet-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络连接（Internet Connection）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#安装类型type-of-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装类型（Type of Installation）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#应用程序applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用程序（Applications）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#专有软件proprietary-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      专有软件（Proprietary Software）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#磁盘与分区disk-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      磁盘与分区（Disk Setup）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#设置账户account" class="md-nav__link">
+    <span class="md-ellipsis">
+      设置账户（Account）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#选择时区timezone" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择时区（Timezone）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#确认安装install" class="md-nav__link">
+    <span class="md-ellipsis">
+      确认安装（Install）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#重启系统restart" class="md-nav__link">
+    <span class="md-ellipsis">
+      重启系统（Restart）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>安装 Ubuntu</h1>
+
+<h2 id="禁用-secure-boot-功能">禁用 Secure Boot 功能<a class="headerlink" href="#禁用-secure-boot-功能" title="固定链接">#</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Secure Boot（安全启动）</p>
+<p><strong>Secure Boot</strong> 是 BIOS 的一种安全功能，旨在确保操作系统和启动项的完整性和可信性，可以防止未经授权的操作系统、
+病毒和恶意软件向计算机进行认证，进而保护系统不被攻击和篡改。</p>
+<p><strong>但在使用外部 U 盘运行某些程序或安装其他操作系统时，会被受到限制而无法运行/安装，因此需要临时禁用，直至所有配置完成（安装 NVIDIA 显卡驱动后）。</strong></p>
+</div>
+<hr />
+<p>首先进入 BIOS，启动电源/重启系统后，在 LOGO 界面（1~2s 内）按下特定的按键进入</p>
+<div class="admonition tip">
+<p class="admonition-title">进入 BIOS 界面</p>
+<p>不同的主板/电脑进入 BIOS 的按键和操作方法不尽相同，常见的按键如：<span class="keys"><kbd class="key-f2">F2</kbd></span>、<span class="keys"><kbd class="key-f12">F12</kbd></span>、<span class="keys"><kbd class="key-delete">Del</kbd></span>、<span class="keys"><kbd class="key-escape">Esc</kbd></span>等，
+建议根据主板品牌/型号查询，如搜索 "华硕主板如何禁用 Secure Boot 功能"。</p>
+</div>
+<hr />
+<p>通常在 BIOS（Advanced Mode）的 <code>Security</code>（安全）或 <code>Boot</code> 栏中，设置
+<code>Secure Boot</code> 选项为 <code>Disabled</code>（Off）进行禁用，最后保存更改即可</p>
+<blockquote>
+<p>有些主板除了禁用 Secure Boot 外，还需要更改 <code>OS Type</code> 为 <code>Other OS</code></p>
+</blockquote>
+<figure>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/secure-boot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/secure-boot.png" /></a></p>
+<figcaption>
+<p>例如华硕主板的 BIOS 界面（旧版本），图片来源于华硕官网</p>
+</figcaption>
+</figure>
+<hr />
+<h2 id="从-u-盘启动引导">从 U 盘启动引导<a class="headerlink" href="#从-u-盘启动引导" title="固定链接">#</a></h2>
+<div class="admonition info">
+<p class="admonition-title">引导启动</p>
+<p>安装 Ubuntu 系统需要从引导盘（U盘）使用 ISO 镜像安装。</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="在-biosboot-manager-启动" name="__tabbed_1" type="radio" /><input id="使用高级启动windows" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="在-biosboot-manager-启动">在 BIOS/Boot Manager 启动</label><label for="使用高级启动windows">使用高级启动（Windows）</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>进入 BIOS/Boot Manager，在 <strong>"Boot Manager"</strong> 或 <strong>"启动选项"</strong> 选择相应的 U 盘（USB Device）即可</p>
+<figure>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/boot-manager.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/boot-manager.png" /></a></p>
+<figcaption>
+<p>VMware 的 Boot Manager</p>
+</figcaption>
+</figure>
+</div>
+<div class="tabbed-block">
+<p>如果使用 Windows 系统，可以通过 <strong>"设置 → 系统 → 恢复 → 高级启动"</strong> 立刻重新启动，进入高级启动界面</p>
+<figure>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/advanced-startup-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/advanced-startup-1.png" /></a></p>
+<figcaption>
+<p>系统设置（Windows 11）</p>
+</figcaption>
+</figure>
+<hr />
+<p>进入高级启动后，选择 <strong>"使用设备"</strong> 并选择相应的 U 盘（USB Device）即可</p>
+<figure>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/advanced-startup-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/advanced-startup-2.png" /></a></p>
+<figcaption>
+<p>高级启动（Windows 11）</p>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="选择-ubuntu-镜像文件">选择 Ubuntu 镜像文件<a class="headerlink" href="#选择-ubuntu-镜像文件" title="固定链接">#</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Ventoy 镜像</p>
+<p>从 U 盘启动引导后，Ventoy 会自动查找镜像文件，并进入 Ventoy 的镜像选择菜单界面。</p>
+</div>
+<p>在 Ventoy 选择菜单中，选择需要安装的 Ubuntu 镜像文件（<code>ubuntu-xx.xx.x-desktop-amd64.iso</code>）</p>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ventoy-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ventoy-1.png" /></a></p>
+<hr />
+<p>选择镜像后进入二级菜单，选择 <strong>"Boot in normal mode"</strong>（以正常模式启动）</p>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ventoy-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ventoy-2.png" /></a></p>
+<hr />
+<h2 id="ubuntu-安装配置">Ubuntu 安装配置<a class="headerlink" href="#ubuntu-安装配置" title="固定链接">#</a></h2>
+<p>在 GRUB 启动菜单中，选择 <strong>"Try or Install Ubuntu"</strong>（尝试或安装 Ubuntu），进入 Ubuntu 系统</p>
+<details class="info" open="open">
+<summary>GRUB 选项说明</summary>
+<ul>
+<li><strong>Try or Install Ubuntu</strong>：进入 Ubuntu 的 Live CD 系统，试用或安装 Ubuntu，可以在不安装系统的情况下直接从启动盘启动，通常用于安装新的操作系统或者修复旧的操作系统。</li>
+<li><strong>Ubuntu (safe graphics)</strong>：以安全图形模式启动 Ubuntu 系统，确保系统以兼容性较好的图形模式启动，从而减少可能出现的图形或显卡驱动问题。</li>
+<li><strong>OEM install (for manufacturers)</strong>：原始设备制造商（Original Equipment Manufacturer）安装，为计算机制造商和系统集成商设计的，用于在计算机出厂前进行批量预安装操作系统，并为用户准备好定制化的系统设置。</li>
+<li><strong>Boot from next volume</strong>：从下一个卷（磁盘分区）引导启动系统，当计算机上有多个操作系统或者多个引导设备时，可以选择该选项来从其他卷或设备中切换系统。</li>
+<li><strong>UEFI Firmware Settings</strong>：进入计算机的 UEFI 固件设置界面（即 BIOS），可以对计算机的硬件设置、启动顺序、安全启动等进行调整和配置。</li>
+</ul>
+</details>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/grub-install-ubuntu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/grub-install-ubuntu.png" /></a></p>
+<hr />
+<h3 id="系统语言language">系统语言（Language）<a class="headerlink" href="#系统语言language" title="固定链接">#</a></h3>
+<p>选择系统语言，并点击 <strong>"Next"</strong> 下一步</p>
+<blockquote>
+<p>中文（简体）在选项最底部</p>
+</blockquote>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-1.png" /></a></p>
+<hr />
+<h3 id="可访问性accessibility">可访问性（Accessibility）<a class="headerlink" href="#可访问性accessibility" title="固定链接">#</a></h3>
+<p>如无特殊需求，可以点击 <strong>"Next"</strong> 跳过</p>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-2.png" /></a></p>
+<hr />
+<h3 id="键盘布局keyboard-layout">键盘布局（Keyboard Layout）<a class="headerlink" href="#键盘布局keyboard-layout" title="固定链接">#</a></h3>
+<p>选择 <code>English</code>（英文）或 <code>Chinese</code>（中文）均可，也可以之后再安装其他输入法</p>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-3.png" /></a></p>
+<hr />
+<h3 id="网络连接internet-connection">网络连接（Internet Connection）<a class="headerlink" href="#网络连接internet-connection" title="固定链接">#</a></h3>
+<p>选择一种网络类型，根据网络情况选择是否连接至互联网</p>
+<div class="admonition tip">
+<p class="admonition-title">额外安装与联网更新</p>
+<p>连接网络后会提供额外的安装选项（如可选专有软件），并在安装过程中自动获取更新，但可能会导致安装时间大大延长。</p>
+<p>如果网络较差，建议选择 <code>Do not connect to the internet</code> 暂不连接网络。</p>
+</div>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-4.png" /></a></p>
+<hr />
+<h3 id="安装类型type-of-installation">安装类型（Type of Installation）<a class="headerlink" href="#安装类型type-of-installation" title="固定链接">#</a></h3>
+<p>选择 <strong>"Install Ubuntu"</strong> 安装 Ubuntu 系统</p>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-5.png" /></a></p>
+<hr />
+<p>选择 <strong>"Interactive installation"</strong>（交互安装）进行自定义配置安装</p>
+<div class="admonition info">
+<p class="admonition-title">选项说明</p>
+<ul>
+<li><strong>Interactive installation（交互安装）</strong>：即传统的安装方式，在安装过程中，用户需要根据引导逐一选择或输入相关配置信息（如分区、账户、时区等），直到完成所有配置后才会开始安装，适用于普通用户的自定义安装。</li>
+<li><strong>Automated installation（自动安装）</strong>：一种无需用户干预、提前配置的高级安装方式，通过网络从指定的 URL 加载 autoinstall.yaml 配置文件，可以按照设定好安装选项进行自动化安装，适用于高级用户或企业统一批量部署。</li>
+</ul>
+<p>自动安装详见：<a href="https://canonical-subiquity.readthedocs-hosted.com/en/latest/intro-to-autoinstall.html">Introduction to autoinstall - Ubuntu installation documentation</a></p>
+</div>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-6.png" /></a></p>
+<hr />
+<h3 id="应用程序applications">应用程序（Applications）<a class="headerlink" href="#应用程序applications" title="固定链接">#</a></h3>
+<p>根据需要选择预安装的应用，推荐选择 <strong>"Default selection"</strong>（默认集合）进行最小化安装</p>
+<div class="admonition info">
+<p class="admonition-title">选项说明</p>
+<ul>
+<li><strong>Default selection（默认集合）</strong>：即最小化安装，仅预装一些基本的应用，但依然包括捆绑的软件（如 Snap、FireFox）。</li>
+<li><strong>Extened selection（扩展集合）</strong>：附带安装一些常用的办公应用、工具（如 LibreOffice、Rhythmbox、GNOME Calendar），无需网络连接即可离线安装（使用 snap 包）。</li>
+</ul>
+</div>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-7.png" /></a></p>
+<hr />
+<h3 id="专有软件proprietary-software">专有软件（Proprietary Software）<a class="headerlink" href="#专有软件proprietary-software" title="固定链接">#</a></h3>
+<p>选择是否安装推荐的专有软件（如显卡驱动、Wi-Fi 驱动和编解码器等），建议<strong>均不勾选</strong>，后续再自行安装</p>
+<div class="admonition warning">
+<p class="admonition-title">开源显卡驱动</p>
+<p>如果勾选 <code>Install third-party software for graphics and Wi-Fi hardware</code>，将会安装第三方专有驱动（如
+NVIDIA 驱动），否则将默认使用开源的显卡驱动（Xorg）。</p>
+<p>另外，勾选后安装的第三方专有驱动（如 NVIDIA 驱动）可能会默认安装非最新稳定版本，如出现问题可以在后续更换。</p>
+</div>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-8.png" /></a></p>
+<hr />
+<h3 id="磁盘与分区disk-setup">磁盘与分区（Disk Setup）<a class="headerlink" href="#磁盘与分区disk-setup" title="固定链接">#</a></h3>
+<p>根据实际情况选择安装类型和磁盘分区</p>
+<div class="admonition question">
+<p class="admonition-title">选择安装类型</p>
+<ul>
+<li>如果已有 Windows 系统且需要安装双系统，可以选择 <strong>"Install Ubuntu alongside Windows Boot Manager
+and Ubuntu 24.04 LTS"</strong>，保留 Windows 相关文件并与 Ubuntu 共存，将会自动进行分区。</li>
+<li>如果安装双系统或自定义分区，选择 <strong>"Manual installation"</strong>（手动安装/分区），自定义磁盘分区。</li>
+<li>如果仅使用 Ubuntu（不存在 Windows 系统），选择 <strong>"Erase disk and install Ubuntu"</strong>（擦除磁盘并安装 Ubuntu）。</li>
+</ul>
+</div>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-9.png" /></a></p>
+<hr />
+<div class="admonition example">
+<p class="admonition-title">手动分区</p>
+<p>以下步骤为自定义分区，即选择 <strong>"Manual installation"</strong>（手动安装）的情况。</p>
+</div>
+<p class="annotate">选择一块磁盘的 <strong>"Free space"</strong>（空闲区）(1)，注意不同磁盘分区的命名差异</p>
+<ol>
+<li>空闲区，即 Windows 系统的磁盘管理中的 "未分配空间"</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">分区命名</p>
+<ul>
+<li><code>/dev/sda1</code>：第1块 <ins><strong>SATA/SCSI/USB 硬盘</strong></ins>（<code>a</code>）的第1块分区（<code>1</code>）</li>
+<li><code>/dev/sdb2</code>：第2块 <ins><strong>SATA/SCSI/USB 硬盘</strong></ins>（<code>b</code>）的第2块分区（<code>2</code>）</li>
+<li><code>/dev/nvme0n1p1</code>：第1块 <ins><strong>NVMe 硬盘</strong></ins>（<code>nvme0</code>）的第1个命名空间（<code>n1</code>）的第1块分区（<code>p1</code>）</li>
+<li><code>/dev/nvme1n1p2</code>：第2块 <ins><strong>NVMe 硬盘</strong></ins>（<code>nvme1</code>）的第1个命名空间（<code>n1</code>）的第2块分区（<code>p2</code>）</li>
+<li>......以此类推</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">注意正确选择硬盘空闲区</p>
+<p>如果有两块或两块以上的硬盘，例如想要将 Ubuntu 安装在第二块硬盘，务必选择<strong>第二块硬盘下方</strong>的空闲区（<code>Free space</code>）！</p>
+</div>
+<figure>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-10.png" /></a></p>
+<figcaption>
+<p>图中，欲将 Ubuntu 安装在第二块硬盘的第二块分区（nvme1n1n1p1）之后，具体以实际情况为准</p>
+</figcaption>
+</figure>
+<hr />
+<div class="admonition info">
+<p class="admonition-title">Linux 根挂载点</p>
+<p>在基于 Linux 内核的系统中，默认所有的目录和文件都置于<strong>根挂载点<code>/</code></strong>下，可以为某些重要分区/目录单独地分配一个独立的分区，
+以提高系统的管理效率、安全性和性能，并避免数据损坏或丢失。</p>
+</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Linux 常见分区/目录<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></th>
+<th style="text-align: left;">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>/boot</code>（MBR）<br/> <code>/boot/efi</code>（GPT）</td>
+<td style="text-align: left;"><strong>引导分区</strong>，存放引导程序文件</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>swap</code></td>
+<td style="text-align: left;"><strong>内存交换分区</strong>，相当于虚拟内存</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/</code></td>
+<td style="text-align: left;"><strong>根挂载点</strong>，整个文件系统的根目录</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/home</code></td>
+<td style="text-align: left;"><strong>普通用户主目录</strong>，存储普通用户的一般文件</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/root</code></td>
+<td style="text-align: left;"><strong>root 用户主目录</strong>，存储 root 用户的数据和脚本文件</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/bin</code></td>
+<td style="text-align: left;">存储基本命令的二进制文件</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/usr</code></td>
+<td style="text-align: left;">存储系统软件，包含用户数据和应用程序</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/etc</code></td>
+<td style="text-align: left;">存储系统配置文件</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/tmp</code></td>
+<td style="text-align: left;">存储临时文件，通常在重启后自动删除</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/var</code></td>
+<td style="text-align: left;">存储变量文件，比如日志或缓存</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/dev</code></td>
+<td style="text-align: left;">存储设备文件，通常是硬件设备的接口文件</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<details class="info">
+<summary>常用分区方案（GPT，200 GB）</summary>
+<p>以下分区方案仅供参考，可以根据具体需求适当调整，或是减少/增加独立分区，例如不单独分配 <code>/home</code> 分区，或增加 <code>/usr</code>、<code>/var</code> 分区。</p>
+<p>一般而言，如果电脑内存为 16GB 或以上，<code>swap</code> 分区可以不分配或少分配（日常使用基本不会占满）。</p>
+<p>对于根目录 <code>/</code> 和用户主目录 <code>/home</code>，建议用剩余的所有空间以 4:6 或 5:5 比例分配，两者至少为 20GB。</p>
+<p><table><thead>
+  <tr>
+    <th style="text-align: center;">独立分区</th>
+    <th style="text-align: center;">分区类型<br/>（Type）</th>
+    <th style="text-align: center;">文件系统<br/>（File System）</th>
+    <th style="text-align: center;">挂载点<br/>（Mount Point）</th>
+    <th style="text-align: center;">大小<br/>（Size）</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td style="text-align: center;">引导分区 <code>/boot/efi</code></td>
+    <td style="text-align: center;">逻辑分区（Logical）</td>
+    <td style="text-align: center;" colspan="2">EFI 系统分区（EFI System Partition）</td>
+    <td style="text-align: center;">1 GB</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">内存交换分区 <code>swap</code></td>
+    <td style="text-align: center;">逻辑分区（Logical）</td>
+    <td style="text-align: center;" colspan="2">交换空间（swap area）</td>
+    <td style="text-align: center;">4096 MB</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">根挂载点 <code>/</code></td>
+    <td style="text-align: center;">主分区（Primary）</td>
+    <td style="text-align: center;">Ext4 日记文件系统</td>
+    <td style="text-align: center;"><code>/</code></td>
+    <td style="text-align: center;">81920 MB</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">用户主目录 <code>/home</code></td>
+    <td style="text-align: center;">逻辑分区（Logical）</td>
+    <td style="text-align: center;">Ext4 日记文件系统</td>
+    <td style="text-align: center;"><code>/home</code></td>
+    <td style="text-align: center;">剩余所有</td>
+  </tr>
+</tbody>
+</table></p>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">Ubuntu 24.04 建议仅划分出根挂载点</p>
+<p>在 Ubuntu 24.04 之后，引导分区会自动分配大小，因此建议<strong>仅划分出根挂载点 <code>/</code></strong> 即可。</p>
+</div>
+<hr />
+<p>先在左下方选择安装所在硬盘的 <strong>"Device for boot loader installation"</strong> （安装引导程序的设备），即引导分区 <code>/boot/efi</code>，默认会自动分配分区大小</p>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-11.png" /></a></p>
+<hr />
+<p>按照类似于上述方案进行分区，选择 <strong>"Free space"</strong>（空闲区），并点击左下方 <strong>"+"</strong> 按钮，依次新建分区</p>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-12.png" /></a></p>
+<hr />
+<p>分区完成后如下图所示，选择 <strong>"install new"</strong>（立刻安装），后续将会对所分区进行划分和格式化</p>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-13.png" /></a></p>
+<hr />
+<h3 id="设置账户account">设置账户（Account）<a class="headerlink" href="#设置账户account" title="固定链接">#</a></h3>
+<p>设置用户名、计算机名和密码，其中用户和计算机名不宜过长，否则会出现终端输入命令时过长的提示</p>
+<div class="admonition tip">
+<p class="admonition-title">远程控制取消密码</p>
+<p>如果该电脑/系统常被用于远程操控，可以取消 <code>Require my password to log in</code>（登录时需要密码），以便每次重启后无需密码直接进入桌面。</p>
+</div>
+<div class="admonition info annotate">
+<p class="admonition-title">Use Active Directory（使用活动目录）<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p>Active Directory（AD）是用于在网络环境中为企业和组织提供存储和组织网络资源和用户信息的组策略服务，以及统一身份验证和访问控制的能力；
+在安装 Ubuntu 时，可以选择使用 AD 对 Ubuntu 进行用户身份验证和集中式管理。</p>
+</div>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-14.png" /></a></p>
+<hr />
+<h3 id="选择时区timezone">选择时区（Timezone）<a class="headerlink" href="#选择时区timezone" title="固定链接">#</a></h3>
+<p>点击中国版图的任意区域，即 <code>Asia/Shanghai</code> 时区（北京时间，UTC/GMT+08:00）即可</p>
+<div class="admonition tip">
+<p class="admonition-title">自动选择镜像站</p>
+<p>选择位置（Location）后，如果先前连接了网络将会自动将软件源更换至选定位置附近的镜像源，例如
+<code>Shanghai</code>（上海）时区可能会选择 "清华大学镜像站"（tsinghua）。</p>
+</div>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-15.png" /></a></p>
+<hr />
+<h3 id="确认安装install">确认安装（Install）<a class="headerlink" href="#确认安装install" title="固定链接">#</a></h3>
+<p>确认并核对安装选项和信息，点击 <strong>"Install"</strong> 执行安装</p>
+<div class="admonition danger">
+<p class="admonition-title">务必确认硬盘分区！</p>
+<p>务必再三确认磁盘分区是否正确，一旦开始安装将进行磁盘格式化，重要数据务必提前备份！</p>
+</div>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-16.png" /></a></p>
+<hr />
+<p>等待安装完成，可能需要十分钟左右，点击右下方的 <strong>"终端"</strong> 图标可以查看安装详情</p>
+<blockquote>
+<p>如果先前连接网络并勾选了专有软件，安装时将会依据网络状况、更新内容需要额外的安装时间</p>
+</blockquote>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-17.png" /></a></p>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-18.png" /></a></p>
+<hr />
+<h3 id="重启系统restart">重启系统（Restart）<a class="headerlink" href="#重启系统restart" title="固定链接">#</a></h3>
+<p>安装完成后，需要重启系统（Restart）</p>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-19.png" /></a></p>
+<hr />
+<p>重启时需要将启动 U 盘拔出，并按下 <span class="keys"><kbd class="key-enter">Enter</kbd></span> 键。</p>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-20.png" /></a></p>
+<hr />
+<p>启动后进入 GNU GRUB 系统，要求选择启动引导（Boot）项，或是等待 10s 后自动选择第一默认启动项</p>
+<blockquote>
+<p>Window Boot Manager 为 Windows 启动管理器，用于启动 Windows 系统。</p>
+</blockquote>
+<p><a class="glightbox" href="../../../assets/images/ubuntu/ubuntu-installation-21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/images/ubuntu/ubuntu-installation-21.png" /></a></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="https://zh.wikipedia.org/wiki/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E6%A0%87%E5%87%86">文件系统层次结构标准 - 维基百科，自由的百科全书</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://documentation.ubuntu.com/adsys/en/stable/">Active Directory GPO client documentation</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        此页面是否有帮助？
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="很有帮助" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="仍需改进" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              感谢反馈！
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              感谢反馈！
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../boot-and-disk/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 准备磁盘分区">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                准备磁盘分区
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../configuration/" class="md-footer__link md-footer__link--next" aria-label="下一页: 配置 Ubuntu">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                配置 Ubuntu
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Obelusod" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.top", "navigation.tabs", "navigation.indexes", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
